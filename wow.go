@@ -85,6 +85,7 @@ func (w *Wow) Spinner(s spin.Spinner) *Wow {
 }
 
 // Text adds text to the current spinner
+// this will not be printed until the tick hits at least one spin interval
 func (w *Wow) Text(txt string) *Wow {
 	w.mu.Lock()
 	w.txt = txt
